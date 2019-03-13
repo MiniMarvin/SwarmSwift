@@ -1,0 +1,6 @@
+framework module Pods_swarm_game {
+  umbrella header "Pods-swarm-game-umbrella.h"
+
+  export *
+  module * { export * }
+}

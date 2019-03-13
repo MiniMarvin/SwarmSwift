@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		67F8C26B709309F912C089DF /* Pods_swarm_gameTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 490DB7BA58D0AA69D8643647 /* Pods_swarm_gameTests.framework */; };
 		68710FCD22370C2A005F297C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68710FCC22370C2A005F297C /* AppDelegate.swift */; };
 		68710FCF22370C2A005F297C /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 68710FCE22370C2A005F297C /* GameScene.sks */; };
 		68710FD122370C2A005F297C /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 68710FD022370C2A005F297C /* Actions.sks */; };
@@ -19,6 +20,7 @@
 		6871102C2237F67F005F297C /* SwarmAgent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6871102B2237F67F005F297C /* SwarmAgent.swift */; };
 		6871102E2237F84B005F297C /* SwarmEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6871102D2237F84B005F297C /* SwarmEnvironment.swift */; };
 		6871103022380C6C005F297C /* BirdsField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6871102F22380C6C005F297C /* BirdsField.swift */; };
+		8347522DA2DB66D36ABAC7F9 /* Pods_swarm_game.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 407B0A5CD92811348142C110 /* Pods_swarm_game.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +34,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		21A16959F3FB64F031B64ECA /* Pods-swarm-gameTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swarm-gameTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-swarm-gameTests/Pods-swarm-gameTests.debug.xcconfig"; sourceTree = "<group>"; };
+		407B0A5CD92811348142C110 /* Pods_swarm_game.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swarm_game.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		490DB7BA58D0AA69D8643647 /* Pods_swarm_gameTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swarm_gameTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		649D415D51DE366ACF523677 /* Pods-swarm-gameTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swarm-gameTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-swarm-gameTests/Pods-swarm-gameTests.release.xcconfig"; sourceTree = "<group>"; };
 		68710FC922370C2A005F297C /* swarm-game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swarm-game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		68710FCC22370C2A005F297C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		68710FCE22370C2A005F297C /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -48,6 +54,8 @@
 		6871102B2237F67F005F297C /* SwarmAgent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwarmAgent.swift; sourceTree = "<group>"; };
 		6871102D2237F84B005F297C /* SwarmEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwarmEnvironment.swift; sourceTree = "<group>"; };
 		6871102F22380C6C005F297C /* BirdsField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdsField.swift; sourceTree = "<group>"; };
+		F8031AFD840D1541474FAF4D /* Pods-swarm-game.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swarm-game.debug.xcconfig"; path = "Pods/Target Support Files/Pods-swarm-game/Pods-swarm-game.debug.xcconfig"; sourceTree = "<group>"; };
+		FEC45D254F4AAEA157851990 /* Pods-swarm-game.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swarm-game.release.xcconfig"; path = "Pods/Target Support Files/Pods-swarm-game/Pods-swarm-game.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8347522DA2DB66D36ABAC7F9 /* Pods_swarm_game.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,18 +71,32 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67F8C26B709309F912C089DF /* Pods_swarm_gameTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		44C1A76746A8451A1BDEEAC3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F8031AFD840D1541474FAF4D /* Pods-swarm-game.debug.xcconfig */,
+				FEC45D254F4AAEA157851990 /* Pods-swarm-game.release.xcconfig */,
+				21A16959F3FB64F031B64ECA /* Pods-swarm-gameTests.debug.xcconfig */,
+				649D415D51DE366ACF523677 /* Pods-swarm-gameTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		68710FC022370C2A005F297C = {
 			isa = PBXGroup;
 			children = (
 				68710FCB22370C2A005F297C /* swarm-game */,
 				68710FE622370C2B005F297C /* swarm-gameTests */,
 				68710FCA22370C2A005F297C /* Products */,
+				44C1A76746A8451A1BDEEAC3 /* Pods */,
+				A29C4BECE78DF697535ACE65 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -122,6 +145,15 @@
 			path = Agents;
 			sourceTree = "<group>";
 		};
+		A29C4BECE78DF697535ACE65 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				407B0A5CD92811348142C110 /* Pods_swarm_game.framework */,
+				490DB7BA58D0AA69D8643647 /* Pods_swarm_gameTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -129,9 +161,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 68710FEC22370C2B005F297C /* Build configuration list for PBXNativeTarget "swarm-game" */;
 			buildPhases = (
+				38B09C948BCBC7704709536C /* [CP] Check Pods Manifest.lock */,
 				68710FC522370C2A005F297C /* Sources */,
 				68710FC622370C2A005F297C /* Frameworks */,
 				68710FC722370C2A005F297C /* Resources */,
+				2871390691737811FF0A04F2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -146,9 +180,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 68710FEF22370C2B005F297C /* Build configuration list for PBXNativeTarget "swarm-gameTests" */;
 			buildPhases = (
+				4BE4D7A0F5A4A6F6E0550155 /* [CP] Check Pods Manifest.lock */,
 				68710FDF22370C2B005F297C /* Sources */,
 				68710FE022370C2B005F297C /* Frameworks */,
 				68710FE122370C2B005F297C /* Resources */,
+				9FE94F8E7166C18197D59077 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -219,6 +255,107 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2871390691737811FF0A04F2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-swarm-game/Pods-swarm-game-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-swarm-game/Pods-swarm-game-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		38B09C948BCBC7704709536C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-swarm-game-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4BE4D7A0F5A4A6F6E0550155 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-swarm-gameTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9FE94F8E7166C18197D59077 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-swarm-gameTests/Pods-swarm-gameTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
+				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBlocking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTest.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-swarm-gameTests/Pods-swarm-gameTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		68710FC522370C2A005F297C /* Sources */ = {
@@ -390,6 +527,7 @@
 		};
 		68710FED22370C2B005F297C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F8031AFD840D1541474FAF4D /* Pods-swarm-game.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -408,6 +546,7 @@
 		};
 		68710FEE22370C2B005F297C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FEC45D254F4AAEA157851990 /* Pods-swarm-game.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -426,6 +565,7 @@
 		};
 		68710FF022370C2B005F297C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 21A16959F3FB64F031B64ECA /* Pods-swarm-gameTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -447,6 +587,7 @@
 		};
 		68710FF122370C2B005F297C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 649D415D51DE366ACF523677 /* Pods-swarm-gameTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

@@ -10,9 +10,15 @@ import Foundation
 
 class SwarmEnvironment:NSObject {
     
+    // MARK: Variables
+    var canvas:(Int, Int)? = nil
     var partsx:Int
     var partsy:Int
     var forceField:[[Double]]
+    
+    
+    // MARK: Inits
+    
     
     /// Build a clean forcefiend
     ///
@@ -20,6 +26,7 @@ class SwarmEnvironment:NSObject {
     init(parts:Int) {
         self.partsx = parts
         self.partsy = parts
+        
         // Build homogeneous forcefield
         self.forceField = Array(repeating: Array(repeating: 0, count: parts), count: parts)
         super.init()
@@ -27,13 +34,62 @@ class SwarmEnvironment:NSObject {
     
     /// Build a clean forcefiend
     ///
-    /// - Parameter parts: The number of parts in which the forcefield will be splitten
+    /// - Parameters:
+    ///   - parts: The number of parts in which the forcefield will be splitten
+    ///   - canvasWidth: Width of the canvas in wich the field is set
+    ///   - canvasHeight: Height of the canvas in which the field is set
+    init(parts:Int, canvasWidth:Int, canvasHeight:Int) {
+        self.partsx = parts
+        self.partsy = parts
+        self.canvas = (canvasWidth, canvasHeight)
+        
+        // Build homogeneous forcefield
+        self.forceField = Array(repeating: Array(repeating: 0, count: parts), count: parts)
+        super.init()
+    }
+    
+    
+    // MARK: Builders + Setters
+    
+    /// Build a clean forcefiend
+    ///
+    /// - Parameters:
+    ///   - partsx: Number of parts in the x axis
+    ///   - partsy: Number of parts in the y axis
     init(partsx:Int, partsy:Int) {
         self.partsx = partsx
         self.partsy = partsy
+        
         // Build homogeneous forcefield
         self.forceField = Array(repeating: Array(repeating: 0, count: partsy), count: partsx)
         super.init()
+    }
+    
+    /// Build a clean forcefiend
+    ///
+    /// - Parameters:
+    ///   - partsx: Number of parts in the x axis
+    ///   - partsy: Number of parts in the y axis
+    ///   - canvasWidth: Width of the canvas in wich the field is set
+    ///   - canvasHeight: Height of the canvas in which the field is set
+    init(partsx:Int, partsy:Int, canvasWidth:Int, canvasHeight:Int) {
+        self.partsx = partsx
+        self.partsy = partsy
+        self.canvas = (canvasWidth, canvasHeight)
+        
+        // Build homogeneous forcefield
+        self.forceField = Array(repeating: Array(repeating: 0, count: partsy), count: partsx)
+        super.init()
+    }
+    
+    
+    /// Setup the size of the canvas where the field is set
+    ///
+    /// - Parameters:
+    ///   - canvasWidth: Width of the canvas in wich the field is set
+    ///   - canvasHeight: Height of the canvas in which the field is set
+    func setCanvas(canvasWidth:Int, canvasHeight:Int) {
+        self.canvas = (canvasWidth, canvasHeight)
     }
     
     
@@ -64,6 +120,9 @@ class SwarmEnvironment:NSObject {
     }
     
     
+    // MARK: Getters
+    
+    
     /// Get the value of the forcefield in a specific part
     ///
     /// - Parameters:
@@ -89,4 +148,5 @@ class SwarmEnvironment:NSObject {
         
         return self.forceField[px][py]
     }
+    
 }
