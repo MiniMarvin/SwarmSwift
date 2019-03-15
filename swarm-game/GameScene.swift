@@ -19,17 +19,24 @@ class GameScene: SKScene {
     private var tm:TimeInterval = 0
     
     override func didMove(to view: SKView) {
-        self.nodes = self.genNodes(10000, radius: 300)
-        self.environment = BirdsField(nodes: self.nodes, partsx: 10, partsy: 10, canvasWidth: Double(self.frame.width), canvasHeight: Double(self.frame.height))
+        // Add physics body to border
+        self.physicsBody = SKPhysicsBody(edgeLoopFrom: self.frame)
+        self.physicsBody?.pinned = true
+        self.physicsBody?.collisionBitMask = 0b01
+        
+//        self.createFields()
+        
+        self.nodes = self.genNodes(1000, radius: 300, circleRadius: 4)
+        self.environment = BirdsField(nodes: self.nodes, partsx: 30, partsy: 120, canvasWidth: Double(self.frame.width), canvasHeight: Double(self.frame.height))
         
         self.nodes.forEach { agent in
-            agent.startOperation(environment: self.environment!)
+            agent.relatedNode?.run(SKAction.applyImpulse(CGVector(dx: 10, dy: 0), duration: 1))
+//            agent.startOperation(environment: self.environment!)
         }
     }
     
     override func update(_ currentTime: TimeInterval) {
         // Called before each frame is rendered
-        
         if currentTime - self.tm > 3 {
             self.tm = currentTime
         }
@@ -40,8 +47,21 @@ class GameScene: SKScene {
         var nodes:[SwarmAgent] = []
         
         for i in 1...n {
-            let node = SKSpriteNode(color: SKColor.blue, size: CGSize(width: 4, height: 4))
+            let node = SKSpriteNode(color: SKColor.blue, size: CGSize(width: circleRadius, height: circleRadius))
             node.name = String(i)
+//            node.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: circleRadius, height: circleRadius))
+            node.physicsBody = SKPhysicsBody(edgeLoopFrom: node.frame)
+            node.physicsBody?.affectedByGravity = false
+            node.physicsBody?.allowsRotation = true
+//            node.physicsBody?.restitution = 1
+            node.physicsBody?.fieldBitMask = 0b01
+            node.physicsBody?.collisionBitMask = 0b01
+            
+            let w = Double(-self.frame.width/2) + self.randomInterval(min: 0, max: Double(self.frame.width), precision: 3)
+            let h = Double(-self.frame.height/2) + self.randomInterval(min: 0, max: Double(self.frame.height), precision: 3)
+            node.position = CGPoint(x: w, y: h)
+            
+
             
             let limit:Double = Double(radius)
             var x = randomInterval(min: 0, max: limit, precision: 5)
@@ -54,36 +74,30 @@ class GameScene: SKScene {
                 y *= -1
             }
             
-            let act = SKAction.moveBy(x: CGFloat(x), y: CGFloat(y), duration: 0.5)
-            let reversed = act.reversed()
-//            let group = SKAction.sequence([act, reversed])
-//            let r = SKAction.repeatForever(group)
-            let rotate = SKAction.rotate(byAngle: 0.1, duration: 0.5)
+            let dur = self.randomInterval(min: 0, max: 1, precision: 3)
+//            let act = SKAction.moveBy(x: CGFloat(x), y: CGFloat(y), duration: dur)
+//            let reversed = act.reversed()
+//            let action = SKAction.applyImpulse(CGVector(dx: x/100, dy: y/100), duration: dur)
+//            let reversed = SKAction.applyImpulse(CGVector(dx: -x/100, dy: -y/100), duration: dur)
+            let action = SKAction.speed(to: 0, duration: dur)
+            let reversed = SKAction.speed(to: -100, duration: dur)
+            let rotate = SKAction.rotate(byAngle: 10, duration: 0.5)
             
-//            node.run(r)
             self.addChild(node)
             
-            
             // Swarm Agent implementation
-            let agent = SwarmAgent(category: 1, id: i, relatedNode: node, actions: [act, reversed]) { (act, env, agent) in
+            let agent = SwarmAgent(category: 1, id: i, relatedNode: node, actions: [action, rotate]) { (act, env, agent) in
                 let x = Double((agent.relatedNode?.position.x)!)
                 let y = Double((agent.relatedNode?.position.y)!)
                 var val = 0.0
-                if env.valueAtPosition(x: x, y: y) > 50 {
-                    if (act == reversed) {
-                        val = -100
-                    }
-                    else {
-                        val = 100
-                    }
+                
+                if env.valueAtPosition(x: x, y: y) > Double(n)/100 {
+                    if (act == rotate) { val = -100 }
+                    else { val = 100 }
                 }
                 else {
-                    if (act == reversed) {
-                        val = 100
-                    }
-                    else {
-                        val = -100
-                    }
+                    if (act == rotate) { val = 100 }
+                    else { val = -100 }
                 }
                 
                 return val
@@ -92,6 +106,21 @@ class GameScene: SKScene {
         }
         
         return nodes
+    }
+    
+    func createFields() {
+        let field = SKFieldNode.vortexField()
+        field.position = CGPoint(x: 0, y: 0)
+        field.strength = 0.2
+        field.categoryBitMask = 0b01
+        
+//        let field1 = SKFieldNode.vortexField()
+//        field1.position = CGPoint(x: 0, y: 100)
+//        field1.strength = 2
+//        field1.categoryBitMask = 0b01
+        
+        self.addChild(field)
+//        self.addChild(field1)
     }
     
     func randomInterval(min:Double, max:Double, precision:Int) -> Double {
