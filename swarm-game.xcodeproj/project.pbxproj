@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		67F8C26B709309F912C089DF /* Pods_swarm_gameTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 490DB7BA58D0AA69D8643647 /* Pods_swarm_gameTests.framework */; };
+		6844CC5C223A8019008CB1B1 /* SwarmAgent+Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6844CC5B223A8019008CB1B1 /* SwarmAgent+Actions.swift */; };
 		68710FCD22370C2A005F297C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68710FCC22370C2A005F297C /* AppDelegate.swift */; };
 		68710FCF22370C2A005F297C /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 68710FCE22370C2A005F297C /* GameScene.sks */; };
 		68710FD122370C2A005F297C /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 68710FD022370C2A005F297C /* Actions.sks */; };
@@ -38,6 +39,7 @@
 		407B0A5CD92811348142C110 /* Pods_swarm_game.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swarm_game.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		490DB7BA58D0AA69D8643647 /* Pods_swarm_gameTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swarm_gameTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		649D415D51DE366ACF523677 /* Pods-swarm-gameTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swarm-gameTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-swarm-gameTests/Pods-swarm-gameTests.release.xcconfig"; sourceTree = "<group>"; };
+		6844CC5B223A8019008CB1B1 /* SwarmAgent+Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwarmAgent+Actions.swift"; sourceTree = "<group>"; };
 		68710FC922370C2A005F297C /* swarm-game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swarm-game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		68710FCC22370C2A005F297C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		68710FCE22370C2A005F297C /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				6871102B2237F67F005F297C /* SwarmAgent.swift */,
+				6844CC5B223A8019008CB1B1 /* SwarmAgent+Actions.swift */,
 				6871102D2237F84B005F297C /* SwarmEnvironment.swift */,
 				6871102F22380C6C005F297C /* BirdsField.swift */,
 			);
@@ -365,6 +368,7 @@
 				6871102C2237F67F005F297C /* SwarmAgent.swift in Sources */,
 				68710FD322370C2A005F297C /* GameScene.swift in Sources */,
 				6871102E2237F84B005F297C /* SwarmEnvironment.swift in Sources */,
+				6844CC5C223A8019008CB1B1 /* SwarmAgent+Actions.swift in Sources */,
 				68710FD522370C2A005F297C /* GameViewController.swift in Sources */,
 				68710FCD22370C2A005F297C /* AppDelegate.swift in Sources */,
 				6871103022380C6C005F297C /* BirdsField.swift in Sources */,
